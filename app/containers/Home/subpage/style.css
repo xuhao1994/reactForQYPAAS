@@ -2,5 +2,75 @@
 * @Author: ASUS
 * @Date:   2017-09-25 17:49:13
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-09-25 17:49:31
+* @Last Modified time: 2017-09-26 17:52:36
 */
+.homeHeader {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    background-color: rgba(240, 243, 237, 0.75);
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 40px;
+    padding-left: 16px;
+    z-index: 10;
+}
+.homeHeader a{
+    text-decoration: none;
+    color: #69bf50;
+    font-size: 18px;
+    position: absolute;
+    display: inline-block;
+    max-width: 64px;
+    box-sizing: border-box;
+    padding-right: 16px;
+}
+.homeHeader a::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background: url(../../../static/img/down-arrow.png) center no-repeat;
+    position: absolute;
+    right: 0px;
+    top: 13px;
+    background-size: contain;
+}
+.searchInputBox {
+    display: inline-block;
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid #dfdbdb;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px #dfdbdb;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    position: absolute;
+    right: 16px;
+    top: 4px;
+    overflow: hidden;
+}
+.searchInputBox::after {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 7px;
+    background: url(../../../static/img/search-icon.png) center no-repeat;
+    background-size: cover;
+    left: 8px;
+}
+.searchInputBox>input {
+    display: inline-block;
+    margin-left: 32px;
+    font-size: 16px;
+    height: 100%;
+    border: none;
+    outline: none;
+    position: relative;
+    top: -2px;
+    color: #999;
+}

@@ -1,0 +1,36 @@
+/*
+* @Author: ASUS
+* @Date:   2017-09-26 17:39:40
+* @Last Modified by:   ASUS
+* @Last Modified time: 2017-09-26 18:06:30
+*/
+div#home-category {
+    position: relative;
+}
+.carousel-item img {
+    display: inline-block;
+    width: 100%;
+}
+.index-container {
+    position: absolute;
+    height: 16px;
+    bottom: 4px;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+.index-container>span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #eee;
+    margin: 0 2px;
+    position: relative;
+    bottom: 5px;
+    border-radius: 50%;
+}
+.index-container>span.selected{
+	background-color: #019eeb;
+}
