@@ -21,7 +21,6 @@ class Category extends React.Component {
             auto: 2500,
             callback: function (index) {
                 // 更新当前轮播图的index
-                console.log(index)
                 this.setState({index: index});
             }.bind(this)
         }
@@ -44,6 +43,7 @@ class Category extends React.Component {
                     <span className={(this.state.index == 0||this.state.index == 2) ? "selected" : ''}></span>
                     <span className={(this.state.index == 1||this.state.index == 3) ? "selected" : ''}></span>
                 </div>
+                <div className="banner-radius"></div>
             </div>
         )
     }

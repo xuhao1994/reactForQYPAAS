@@ -2,11 +2,25 @@
 * @Author: ASUS
 * @Date:   2017-09-25 17:12:06
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-09-26 17:01:31
+* @Last Modified time: 2017-09-27 17:25:25
 */
 *{
 	margin:0;
 	padding:0;
 }
 body{
+}
+.clearfix::before {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }

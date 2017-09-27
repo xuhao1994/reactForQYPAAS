@@ -1,0 +1,69 @@
+/*
+* @Author: ASUS
+* @Date:   2017-09-27 09:08:58
+* @Last Modified by:   ASUS
+* @Last Modified time: 2017-09-27 11:39:41
+*/
+
+#home-categoryEnter{
+	position: relative;
+	height: 204px;
+}
+.quickEnter a{
+	display: inline-block;
+	height: 100px;
+	width: 25%;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	color: #999;
+}
+.quickEnter a>span{
+	display: block;
+	height: 64px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.quickEnter a>span.ruzhitijian{
+	background: url(../../static/img/2017080310190004081421.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.changguitijian{
+	background: url(../../static/img/2017080310190005390095.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.zhonglaoniantijian{
+	background: url(../../static/img/2017080310200001365055.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.nanxingtijian{
+	background: url(../../static/img/2017080310200002831134.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.nvxingtijian{
+	background: url(../../static/img/2017080310200004837807.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.youshengyouyu{
+	background: url(../../static/img/2017080310210000746858.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.hunqiantijian{
+	background: url(../../static/img/2017080310210002160210.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>span.qingshaoniantijian{
+	background: url(../../static/img/2017080310210004157657.png) no-repeat center;
+	background-size: contain;
+}
+.quickEnter a>b{
+	display: block;
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 8px;
+}
+#home-categoryEnter .index-container{
+	bottom:0;
+}
