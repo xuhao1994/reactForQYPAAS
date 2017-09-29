@@ -2,13 +2,16 @@
 * @Author: ASUS
 * @Date:   2017-09-25 17:12:06
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-09-27 17:25:25
+* @Last Modified time: 2017-09-29 14:27:03
 */
 *{
 	margin:0;
 	padding:0;
 }
 body{
+}
+.fl{
+    float: left;
 }
 .clearfix::before {
     content: "";
@@ -23,4 +26,56 @@ body{
     height: 0;
     clear: both;
     visibility: hidden;
+}
+.nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media only screen and (min-width: 360px){
+    html {
+        font-size: 14px;
+    }
+}       
+@media only screen and (min-width: 414px){
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 428px){
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 16px; 
+    }
+}
+@media only screen and (min-width: 569px){
+    html {
+        font-size: 16px; 
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 735px){
+    html {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 930px){
+    html {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    html {
+        font-size: 32px;
+    }
 }

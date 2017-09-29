@@ -6,8 +6,8 @@ import Category from '../../components/Category'
 import CategoryEnter from '../../components/Category2'
 import HomeAd from './subpage/HomeAd'
 import HomeListTitle from './subpage/HomeListTitle'
-
-
+import HomeJgBox from './subpage/HomeJgBox'
+import HomeProductList from './subpage/HomeProductList'
 class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -20,7 +20,10 @@ class Home extends React.Component {
                 <Category/>
                 <CategoryEnter/>
                 <HomeAd/>
+                <HomeListTitle url="/" title="推荐机构"/>
+                <HomeJgBox/>
                 <HomeListTitle url="/" title="推荐套餐"/>
+                <HomeProductList/>
             </div>
         )
     }
