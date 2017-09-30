@@ -22,7 +22,7 @@ class Home extends React.Component {
                 <HomeAd/>
                 <HomeListTitle url="/" title="推荐机构"/>
                 <HomeJgBox/>
-                <HomeListTitle url="/" title="推荐套餐"/>
+                <HomeListTitle url="/ProList/all" title="推荐套餐"/>
                 <HomeProductList/>
             </div>
         )
