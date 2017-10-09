@@ -2,6 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import HeaderDemo1 from '../../components/HeaderDemo1'
 import TCDemo1 from '../../components/TCDemo1'
+import {getProListData} from '../../fetch/productList/productList.js'
 import './style.css'
 
 class Prolist extends React.Component {
@@ -36,6 +37,19 @@ class Prolist extends React.Component {
                 }
             </div>
         )
+    }
+    componentDidMount(){
+        const result = getProListData();
+        result.then(res=>{
+            return res.json()
+        }).then(json=>{
+            const data = json.data
+            if(data.length){
+                this.setState({
+                    data:data
+                })
+            }
+        })
     }
 }
 export default Prolist
