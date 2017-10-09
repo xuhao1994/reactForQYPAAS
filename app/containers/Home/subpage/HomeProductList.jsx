@@ -36,7 +36,7 @@ class HomeProductList extends React.Component {
     }
 
     componentDidMount(){
-        //获取广告数据
+        //获取套餐数据
         const result = getProListData()
         result.then(res=>{
             return res.json()

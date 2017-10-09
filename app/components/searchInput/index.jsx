@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import './style.css'
 class SearchInput extends React.Component {
     constructor(props, context) {
         super(props, context);

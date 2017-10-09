@@ -57,7 +57,7 @@ class CategoryEnter extends React.Component {
         )
     }
     componentDidUpdate(){
-        console.log(this.state.height)
+        
     }
 }
 

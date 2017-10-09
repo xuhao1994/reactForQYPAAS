@@ -2,7 +2,7 @@
 * @Author: ASUS
 * @Date:   2017-09-25 17:49:13
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-09-29 14:57:34
+* @Last Modified time: 2017-10-09 11:35:21
 */
 .homeHeader {
     position: fixed;
@@ -37,42 +37,11 @@
     top: 0.8rem;
     background-size: contain;
 }
-.searchInputBox {
-    display: inline-block;
-    width: 70%;
-    box-sizing: border-box;
-    border: 1px solid #dfdbdb;
-    border-radius: 1rem;
+.homeHeader .searchInputBox{
     box-shadow: 1px 1px 10px #dfdbdb;
-    height: 2rem;
-    line-height: 2rem;
-    background: #fff;
     position: absolute;
     right: 1rem;
-    top: 0.25rem;
-    overflow: hidden;
-}
-.searchInputBox::after {
-    content: "";
-    display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    position: absolute;
-    top: 0.45rem;
-    background: url(../../../static/img/search-icon.png) center no-repeat;
-    background-size: cover;
-    left: 0.5rem;
-}
-.searchInputBox>input {
-    display: inline-block;
-    margin-left: 2rem;
-    font-size: 1rem;
-    height: 100%;
-    border: none;
-    outline: none;
-    position: relative;
-    top: -2px;
-    color: #999;
+
 }
 
 
