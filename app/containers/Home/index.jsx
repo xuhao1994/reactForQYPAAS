@@ -11,6 +11,7 @@ import HomeAd from './subpage/HomeAd'
 import HomeListTitle from './subpage/HomeListTitle'
 import HomeJgBox from './subpage/HomeJgBox'
 import HomeProductList from './subpage/HomeProductList'
+import PublicFooter from '../../components/publicFooter'
 class Home extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -27,6 +28,7 @@ class Home extends React.Component {
                 <HomeJgBox/>
                 <HomeListTitle url="/ProList/all" title="推荐套餐"/>
                 <HomeProductList cityName={this.props.userinfo.cityName}/>
+                <PublicFooter/>
             </div>
         )
     }
