@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {Link} from 'react-router'
-
+import {connect} from 'react-redux'
 import SearchInput from '../../../components/searchInput'
 
 import './style.css'
@@ -16,11 +16,26 @@ class HomeHeader extends React.Component {
     render() {
         return (
             <div className="homeHeader">
-            	<Link to='/'>昆明</Link>
+            	<Link to='/'>{this.props.userinfo.cityName}</Link>
             	<SearchInput 
             	placeholder="请输入套餐/医院名称"/>
             </div>
         )
     }
 }
-export default HomeHeader
+
+
+function mapStateToProps(state){
+    return{
+        userinfo:state.userinfo
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return{}
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(HomeHeader);

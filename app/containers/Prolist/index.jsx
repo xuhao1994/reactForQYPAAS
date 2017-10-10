@@ -3,6 +3,9 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import HeaderDemo1 from '../../components/HeaderDemo1'
 import TCDemo1 from '../../components/TCDemo1'
 import {getProListData} from '../../fetch/productList/productList.js'
+import LoadMore from '../../components/LoadMore'
+import NoMore from '../../components/NoMore'
+import {connect} from 'react-redux'
 import './style.css'
 
 class Prolist extends React.Component {
@@ -10,7 +13,10 @@ class Prolist extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            data:[]
+            data:[],
+            hasMore:false,
+            isLoadingMore:false,
+            page:1
         }
     }
     render() {
@@ -35,21 +41,68 @@ class Prolist extends React.Component {
                     :
                     <div>加载中...</div>
                 }
+                {
+                    this.state.hasMore
+                    ?<LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
+                    :<NoMore/>
+                }
             </div>
         )
     }
     componentDidMount(){
-        const result = getProListData();
-        result.then(res=>{
+        this.loadFirstPageData()
+    }
+    loadFirstPageData(){
+        const cityName = this.props.userinfo.cityName;
+        const result = getProListData(cityName,0);
+        this.showData(result);
+    }
+    loadMoreData(){
+        this.setState({
+            isLoadingMore:true
+        })
+        const cityName = this.props.userinfo.cityName;
+        const page = this.state.page;
+        const result = getProListData(cityName,page);
+        function callback(){
+            this.showData(result)
+            this.setState({
+                isLoadingMore:false,
+                page:page+1
+            })
+        }
+        setTimeout(callback.bind(this), 1000)
+    }
+    showData(data){
+        data.then(res=>{
             return res.json()
-        }).then(json=>{
-            const data = json.data
-            if(data.length){
-                this.setState({
-                    data:data
-                })
+        }).then((json)=>{
+            this.setState({
+                data:this.state.data.concat(json.data),
+                hasMore:json.hasMore
+            })
+        }).catch((ex)=>{
+            if(__DEV__){
+                console.error("套餐列表信息获取出错,",ex.message)
             }
         })
     }
+
 }
-export default Prolist
+
+
+
+function mapStateToProps(state){
+    return{
+        userinfo:state.userinfo
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return{}
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Prolist);
