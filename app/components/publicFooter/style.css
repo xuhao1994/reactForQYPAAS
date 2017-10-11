@@ -2,13 +2,63 @@
 * @Author: ASUS
 * @Date:   2017-10-10 16:38:16
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-10-10 18:01:14
+* @Last Modified time: 2017-10-11 09:25:38
 */
 .publicFooter{
 	width: 100%;
 	height: 3rem;
-	background-color: #999;
 	position: fixed;
-	
 	bottom: 0;
+	background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+}
+
+.publicFooter.clearfix>div {
+    height: 100%;
+    position: relative;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.publicFooter.clearfix>div>span{
+	display: block;
+	height: 1.2rem;
+	margin:0.3rem 0 0 0; 
+}
+.publicFooter.clearfix>div a{
+	color: #999;
+	font-size: 0.8rem;
+}
+.publicFooter.clearfix>div:nth-child(1)>span{
+	background: url(../../static/img/footerHome.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(2)>span{
+	background: url(../../static/img/footerMessage.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(3)>span{
+	background: url(../../static/img/footerCar.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(4)>span{
+	background: url(../../static/img/footerUser.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(1).currentLabel>span{
+	background: url(../../static/img/footerHome2.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(2).currentLabel>span{
+	background: url(../../static/img/footerMessage2.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(3).currentLabel>span{
+	background: url(../../static/img/footerCar2.png) no-repeat center;
+	background-size: contain;
+}
+.publicFooter.clearfix>div:nth-child(4).currentLabel>span{
+	background: url(../../static/img/footerUser2.png) no-repeat center;
+	background-size: contain;
 }

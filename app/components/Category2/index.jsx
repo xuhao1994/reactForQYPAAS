@@ -29,24 +29,24 @@ class CategoryEnter extends React.Component {
             <div id="home-categoryEnter">
                 <ReactSwipe swipeOptions={opt}>
                     <div className="quickEnter" >
-                            <Link to="/"><span className='ruzhitijian'></span><b>入职体检</b></Link>
-                            <Link to="/"><span className='changguitijian'></span><b>常规体检</b></Link>
-                            <Link to="/"><span className='zhonglaoniantijian'></span><b>中老年体检</b></Link>
-                            <Link to="/"><span className='nanxingtijian'></span><b>男性体检</b></Link>
-                            <Link to="/"><span className='nvxingtijian'></span><b>女性体检</b></Link>
-                            <Link to="/"><span className='youshengyouyu'></span><b>优生优育</b></Link>
-                            <Link to="/"><span className='hunqiantijian'></span><b>婚前体检</b></Link>
-                            <Link to="/"><span className='qingshaoniantijian'></span><b>青少年体检</b></Link>
+                            <Link to="/ProList/ruzhitijian"><span className='ruzhitijian'></span><b>入职体检</b></Link>
+                            <Link to="/ProList/changguitijian"><span className='changguitijian'></span><b>常规体检</b></Link>
+                            <Link to="/ProList/zhonglaoniantijian"><span className='zhonglaoniantijian'></span><b>中老年体检</b></Link>
+                            <Link to="/ProList/nanxingtijian"><span className='nanxingtijian'></span><b>男性体检</b></Link>
+                            <Link to="/ProList/nvxingtijian"><span className='nvxingtijian'></span><b>女性体检</b></Link>
+                            <Link to="/ProList/youshengyouyu"><span className='youshengyouyu'></span><b>优生优育</b></Link>
+                            <Link to="/ProList/hunqiantijian"><span className='hunqiantijian'></span><b>婚前体检</b></Link>
+                            <Link to="/ProList/qingshaoniantijian"><span className='qingshaoniantijian'></span><b>青少年体检</b></Link>
                     </div>
                     <div className="quickEnter">
-                            <Link to="/"><span className='ruzhitijian'></span><b>入职体检</b></Link>
-                            <Link to="/"><span className='changguitijian'></span><b>常规体检</b></Link>
-                            <Link to="/"><span className='zhonglaoniantijian'></span><b>中老年体检</b></Link>
-                            <Link to="/"><span className='nanxingtijian'></span><b>男性体检</b></Link>
-                            <Link to="/"><span className='ruzhitijian'></span><b>入职体检</b></Link>
-                            <Link to="/"><span className='changguitijian'></span><b>常规体检</b></Link>
-                            <Link to="/"><span className='zhonglaoniantijian'></span><b>中老年体检</b></Link>
-                            <Link to="/"><span className='nanxingtijian'></span><b>男性体检</b></Link>
+                            <Link to="/ProList/ruzhitijian"><span className='ruzhitijian'></span><b>入职体检</b></Link>
+                            <Link to="/ProList/changguitijian"><span className='changguitijian'></span><b>常规体检</b></Link>
+                            <Link to="/ProList/zhonglaoniantijian"><span className='zhonglaoniantijian'></span><b>中老年体检</b></Link>
+                            <Link to="/ProList/nanxingtijian"><span className='nanxingtijian'></span><b>男性体检</b></Link>
+                            <Link to="/ProList/nvxingtijian"><span className='nvxingtijian'></span><b>女性体检</b></Link>
+                            <Link to="/ProList/youshengyouyu"><span className='youshengyouyu'></span><b>优生优育</b></Link>
+                            <Link to="/ProList/hunqiantijian"><span className='hunqiantijian'></span><b>婚前体检</b></Link>
+                            <Link to="/ProList/qingshaoniantijian"><span className='qingshaoniantijian'></span><b>青少年体检</b></Link>
                     </div>
                 </ReactSwipe>
                <div className="index-container">
