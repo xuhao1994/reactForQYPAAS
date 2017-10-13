@@ -1,0 +1,17 @@
+/*
+* @Author: ASUS
+* @Date:   2017-10-12 10:51:09
+* @Last Modified by:   ASUS
+* @Last Modified time: 2017-10-13 11:26:06
+*/
+
+.AddCar{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url(../../static/img/footerCar.png) no-repeat center;
+	background-size: contain;
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+}
