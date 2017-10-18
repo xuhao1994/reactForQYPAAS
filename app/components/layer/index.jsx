@@ -25,6 +25,7 @@ class LayerControl extends React.Component {
     }
     componentWillUnmount(){
         document.body.style.overflow='auto'
+        window.removeEventListener("resize",this.reFreshSize.bind(this))
     }
     reFreshSize(){
         const windowHeight = window.screen.height
