@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import localStore from '../util/localStore.js'
-import {CITYNAME,TABPAGE} from '../config/localStoreKey.js'
+import {CITYNAME,TABPAGE,USERACCOUNT} from '../config/localStoreKey.js'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import * as userInfoActionsFormOtherFile from '../actions/userinfo.js'
@@ -29,13 +29,19 @@ class App extends React.Component {
     }
     componentDidMount(){
 		let cityName = localStore.getItem(CITYNAME);
+        let userAccount = localStore.getItem(USERACCOUNT);
         if(cityName==null){
             cityName = '昆明'
         }
-
+        if(userAccount==null){
+            userAccount = '18519793652'
+        }
         //存储城市信息到redux
         this.props.userInfoActions.update({
-            cityName:cityName
+            cityName:cityName,
+            userAccount:userAccount,
+            userName:"",
+            shopCarNum:0
         });
 
         let tabPage = localStore.getItem(TABPAGE);
@@ -43,7 +49,6 @@ class App extends React.Component {
             tabPage = 1
             localStore.setItem(TABPAGE,tabPage)
         }
-
         //存储footer信息到redux
         this.props.defaultActions.update({
             tabPage:tabPage

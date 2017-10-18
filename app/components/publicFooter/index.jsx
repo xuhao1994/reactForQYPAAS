@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import {TABPAGE} from '../../config/localStoreKey.js'
 import localStore from '../../util/localStore.js'
 import * as defaultActionsFormOtherFile from '../../actions/tabpage.js'
+import ShopCarNum from '../ShopCarNum'
 import './style.css'
 
 
@@ -30,6 +31,7 @@ class PublicFooter extends React.Component {
             return <div key={index} className={"fl "+active} onClick={this.clickHandle.bind(this,ele.id)}>
                     <span></span>
                     <Link to="/">{ele.tabName}</Link>
+                    {ele.id == 3?<ShopCarNum/>:""}
                    </div>
         })
         return (

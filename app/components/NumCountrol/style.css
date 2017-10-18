@@ -1,0 +1,30 @@
+/*
+* @Author: ASUS
+* @Date:   2017-10-18 10:58:50
+* @Last Modified by:   ASUS
+* @Last Modified time: 2017-10-18 14:06:10
+*/
+.NumControl {
+    height: 100%;
+    width: 4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.NumControl>span{
+	display: inline-block;
+	height: 100%;
+	width: 30%;
+	text-align: center;
+	float: right;
+}
+.NumControl>span.NumResult{
+	width: 40%;
+}
+.NumControl>span.NumMinus{
+	background: url(../../static/img/dialogjian.png) no-repeat center;
+	background-size: contain;
+}
+.NumControl>span.NumPlus{
+	background: url(../../static/img/dialogjia.png) no-repeat center;
+	background-size: contain;
+}
