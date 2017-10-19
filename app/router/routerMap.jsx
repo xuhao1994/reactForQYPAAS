@@ -5,6 +5,7 @@ import App from '../containers'
 import Home from '../containers/Home'
 import NotFound from '../containers/404'
 import ProList from '../containers/Prolist'
+import shopCarMainPage from '../containers/shopCarMainPage'
 
 export default class RouterMap extends React.Component{
 	render(){
@@ -13,6 +14,7 @@ export default class RouterMap extends React.Component{
 				<Route path='/' component={App}>
 					<IndexRoute component={Home}/>
 					<Route path="/ProList/:key" component={ProList}/>
+					<Route path='/shopCarMainPage' component={shopCarMainPage}/>
 					<Route path='*' component={NotFound}/>
 				</Route>
 			</Router>

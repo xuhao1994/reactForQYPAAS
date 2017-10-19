@@ -36,12 +36,13 @@ class App extends React.Component {
         if(userAccount==null){
             userAccount = '18519793652'
         }
-        //存储城市信息到redux
+        //存储城市和相关用户信息到redux
         this.props.userInfoActions.update({
             cityName:cityName,
             userAccount:userAccount,
             userName:"",
-            shopCarNum:0
+            shopCarNum:0,
+            shopCarProList:[]
         });
 
         let tabPage = localStore.getItem(TABPAGE);

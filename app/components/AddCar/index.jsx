@@ -59,7 +59,24 @@ class AddCar extends React.Component {
     sureClick(){
         let actions = this.props.userInfoActions
         let userInfo = this.props.userInfo
-        userInfo.shopCarNum = this.state.proSelectCount + userInfo.shopCarNum
+        let proSelectCount = this.state.proSelectCount
+        //需要判断当前新增的套餐是否已经添加过了
+        let flag = true
+        userInfo.shopCarProList.map((ele,index)=>{
+            if(this.props.data.name == ele.data.name){
+                flag = false
+                ele.proNum = ele.proNum + proSelectCount
+            }
+        })
+        if(flag){
+            let curProInfo = {
+                proNum:proSelectCount,
+                data:this.props.data
+            }
+            userInfo.shopCarProList.push(curProInfo)
+        }
+        
+        userInfo.shopCarNum = proSelectCount + userInfo.shopCarNum
         let copy = Object.assign({}, userInfo);
         actions.update(copy)
         this.setState({showLayer:false})

@@ -8,6 +8,7 @@ class LayerControl extends React.Component {
         this.state={
             styleheight:""
         }
+        this.reFreshSize = this.reFreshSize.bind(this)
     }
     render() {
         let style = {
@@ -21,11 +22,11 @@ class LayerControl extends React.Component {
     }
     componentDidMount(){
         this.reFreshSize()
-        window.addEventListener("resize",this.reFreshSize.bind(this))
+        window.addEventListener("resize",this.reFreshSize)
     }
     componentWillUnmount(){
         document.body.style.overflow='auto'
-        window.removeEventListener("resize",this.reFreshSize.bind(this))
+        window.removeEventListener("resize",this.reFreshSize)
     }
     reFreshSize(){
         const windowHeight = window.screen.height

@@ -2,7 +2,7 @@
 * @Author: ASUS
 * @Date:   2017-09-25 17:49:13
 * @Last Modified by:   ASUS
-* @Last Modified time: 2017-10-10 14:36:19
+* @Last Modified time: 2017-10-19 17:51:39
 */
 .homeHeader {
     position: fixed;
@@ -41,11 +41,7 @@
     box-shadow: 1px 1px 10px #dfdbdb;
     position: absolute;
     right: 1rem;
-
 }
-
-
-
 .homeAdBox>div {
     float: left;
     width: 50%;

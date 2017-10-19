@@ -17,8 +17,7 @@ class HomeHeader extends React.Component {
         return (
             <div className="homeHeader">
             	<Link to='/'>{this.props.userinfo.cityName}</Link>
-            	<SearchInput 
-            	placeholder="请输入套餐/医院名称"/>
+            	<SearchInput placeholder="请输入套餐/医院名称"/>
             </div>
         )
     }

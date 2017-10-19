@@ -1,9 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {connect} from 'react-redux'
-
-
-
 import HomeHeader from './subpage/HomeHeader'
 import Category from '../../components/Category'
 import CategoryEnter from '../../components/Category2'

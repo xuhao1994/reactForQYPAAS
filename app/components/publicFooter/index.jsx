@@ -16,10 +16,10 @@ class PublicFooter extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state={
             tabs:[
-                {tabName:"首页",id:1},
-                {tabName:"消息",id:2},
-                {tabName:"购物车",id:3},
-                {tabName:"我的",id:4}
+                {tabName:"首页",id:1,url:'/'},
+                {tabName:"消息",id:2,url:'/message/'},
+                {tabName:"购物车",id:3,url:'/shopCarMainPage'},
+                {tabName:"我的",id:4,url:'/userCenter/'}
             ],
             currentIndex:this.props.tabPage
         }
@@ -30,7 +30,7 @@ class PublicFooter extends React.Component {
             let active = ele.id == this.state.currentIndex ? char : '';
             return <div key={index} className={"fl "+active} onClick={this.clickHandle.bind(this,ele.id)}>
                     <span></span>
-                    <Link to="/">{ele.tabName}</Link>
+                    <Link to={ele.url}>{ele.tabName}</Link>
                     {ele.id == 3?<ShopCarNum/>:""}
                    </div>
         })

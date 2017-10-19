@@ -1,10 +1,12 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import HeaderDemo1 from '../../components/HeaderDemo1'
+import HeaderDemo from '../../components/HeaderDemo'
 import TCDemo1 from '../../components/TCDemo1'
 import {getProListData} from '../../fetch/productList/productList.js'
 import LoadMore from '../../components/LoadMore'
 import NoMore from '../../components/NoMore'
+import BackArrow from '../../components/BackArrow'
+import SearchInput from '../../components/searchInput'
 import {connect} from 'react-redux'
 import './style.css'
 
@@ -22,7 +24,10 @@ class Prolist extends React.Component {
     render() {
         return (
             <div className="ProListBox">
-                <HeaderDemo1/>
+                <HeaderDemo>
+                    <BackArrow/>
+                    <SearchInput placeholder="请输入搜索套餐名字"/>
+                </HeaderDemo>
                 {
                     this.state.data.length
                     ?
